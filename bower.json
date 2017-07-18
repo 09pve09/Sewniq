@@ -2,7 +2,8 @@
   "name": "server",
   "main": "server.js",
   "authors": [
-    "Victor Park <09pve09@gmail.com>"
+    "Victor Park <09pve09@gmail.com>",
+    "Connie Chu <conniechu929@gmail.com>"
   ],
   "description": "",
   "license": "MIT",
@@ -15,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "^1.5.8",
+    "angular": "^1.6.5",
     "angular-route": "^1.5.8"
   }
 }
