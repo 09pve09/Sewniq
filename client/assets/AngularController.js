@@ -1,11 +1,11 @@
-console.log('ShowController is here');
-app.controller('showController', ['$scope','qaFactory', '$routeParams', '$rootScope', function($scope, qaFactory, $routeParams, $rootScope) {
+console.log('AngularController is here');
+app.controller('AngularController', ['$scope', '$routeParams', '$rootScope', function($scope, $routeParams, $rootScope) {
+    $('.countdown').final_countdown({
+          'start': new Date("Jan 22, 2017 15:37:25").getTime()/1000,
+          'end': new Date("Jan 5, 2018 11:37:25").getTime()/1000,
+          'now': new Date().getTime()/1000
+      });
 
-     console.log('>>>>>>>>>>>ID>>>>>', $rootScope.loggedUser);
-     qaFactory.showq(function(returnedData) {
-       $scope.questions = returnedData;
-       console.log('questions are found and displayed!', $scope.questions);
-     })
   /*
     OUR $scope.update function goes here <-- $scope because we need to access this method
     with ng-submit or ng-click (from the form in the previous assignment).  Want to see

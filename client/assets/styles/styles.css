@@ -1,3 +1,88 @@
 h1 {
   color: red;
 }
+
+#container{
+  height: 110vh;
+  background-image: url('../img/sample.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#count_container{
+  height: 100%;
+  background-color: rgba(44,62,80 , 0.6 );
+  background-image: url('../img/pattern.png');
+  background-position: center;
+  background-repeat: repeat;
+  font-family: 'Raleway', 'Arial', sans-serif;
+}
+.countdown-container {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 550px) and (max-width: 700px){
+  #container{
+    height: 200vh;
+    width: auto;
+  }
+  #count_container{
+    height: 100%;
+    width: auto;
+  }
+  .countdown-container{
+    position: relative;
+    top:50%;
+
+  }
+  #clockrow{
+    height: auto !important;
+    width: auto !important;
+    position:relative;
+    bottom: 30%;
+  }
+}
+
+.clock-item .inner {
+  height: 0px;
+  padding-bottom: 100%;
+  position: relative;
+  width: 100%;
+}
+.clock-canvas {
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 50%;
+  height: 0px;
+  padding-bottom: 100%;
+}
+.text {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: -50px;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+  width: 100%;
+}
+.text .val {
+  font-size: 50px;
+}
+.text .type-time {
+  font-size: 20px;
+}
+ @media (min-width: 500px) and (max-width: 991px) {
+.clock-item {
+  margin-bottom: 30px;
+}
+}
+ @media (max-width: 767px) {
+.clock-item {
+  margin: 0px 30px 30px 30px;
+}
+}
