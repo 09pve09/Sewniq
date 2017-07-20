@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="assets/styles/grayscale.css">
     <script src="assets/styles/myjQuery.js"></script>
     <!-- Angular from bower_components, otherwise find the CDN -->
     <script src="angular/angular.js" charset="utf-8"></script>
@@ -18,9 +19,85 @@
     <script src="assets/AngularFactory.js" charset="utf-8"></script>
     <script src="assets/AngularController.js" charset="utf-8"></script>
   </head>
-  <body>
 
+
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+              <button type="button" id='menu_button' class="navbar-toggle" data-toggle="modal" data-target="#myModal">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="glyphicon glyphicon-menu-hamburger gi-2x"></span>
+              </button>
+              <a class="navbar-brand page-scroll" href="#page-top">
+                Sewniq
+              </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#Link_1">Link_1</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#Link_2">Link_2</a>
+                    </li>
+                    <li>
+                      <a data-toggle="modal" data-target="#myModal">
+                        <span class="glyphicon glyphicon-menu-hamburger gi-1-5x"></span>
+                      </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+      <!-- Modal Menu -->
+    <div class="modal fade" id="myModal" role="dialog" tabindex='-1'>
+      <div class="modal-dialog modal-lg text-center">
+        <button type="button" class="close" data-dismiss="modal" style='color:white; padding-top: 1.5%; padding-right: 2%;'><span class="glyphicon glyphicon-remove gi-1-5x"></span></button>
+            <ul id='menu_list'>
+              <li>Link_1</li>
+              <li>Link_2</li>
+              <li>Link_3</li>
+              <li>Link_4</li>
+            </ul>
+      </div>
+    </div>
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h3 class="brand-heading">Sewniq</h3>
+                        <!-- <p class="intro-text">A blah-blah-blah-blah</p> -->
+                        <!-- <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="other_cont">
+      <h1>About Sewniq</h1>
+      <p>Indulgence announcing uncommonly met she continuing two unpleasing terminated. Now busy say down the shed eyes roof paid her. Of shameless collected suspicion existence in. Share walls stuff think but the arise guest. Course suffer to do he sussex it window advice. Yet matter enable misery end extent common men should. Her indulgence but assistance favourable cultivated everything collecting.
+
+Allow miles wound place the leave had. To sitting subject no improve studied limited. Ye indulgence unreserved connection alteration appearance my an astonished. Up as seen sent make he they of. Her raising and himself pasture believe females. Fancy she stuff after aware merit small his. Charmed esteems luckily age out. </p>
+    </div>
     <div ng-view>
     </div>
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Sewniq 2017</p>
+        </div>
+    </footer>
   </body>
 </html>
