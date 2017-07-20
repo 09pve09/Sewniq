@@ -1,63 +1,11 @@
 <div ng-controller = "AngularController">
-  <div id="container">
-    <div id="count_container" class='container-fluid'>
-      <div class="countdown countdown-container container">
-        <div id='clockrow' class="clock row">
-            <div class="clock-item clock-days countdown-time-value col-sm-6 col-md-3">
-                <div class="wrap">
-                    <div class="inner">
-                        <div id="canvas-days" class="clock-canvas"></div>
-
-                        <div class="text">
-                            <p class="val">0</p>
-                            <p class="type-days type-time">DAYS</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="clock-item clock-hours countdown-time-value col-sm-6 col-md-3">
-                <div class="wrap">
-                    <div class="inner">
-                        <div id="canvas-hours" class="clock-canvas"></div>
-
-                        <div class="text">
-                            <p class="val">0</p>
-                            <p class="type-hours type-time">HOURS</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="clock-item clock-minutes countdown-time-value col-sm-6 col-md-3">
-                <div class="wrap">
-                    <div class="inner">
-                        <div id="canvas-minutes" class="clock-canvas"></div>
-
-                        <div class="text">
-                            <p class="val">0</p>
-                            <p class="type-minutes type-time">MINUTES</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="clock-item clock-seconds countdown-time-value col-sm-6 col-md-3">
-                <div class="wrap">
-                    <div class="inner">
-                        <div id="canvas-seconds" class="clock-canvas"></div>
-
-                        <div class="text">
-                            <p class="val">0</p>
-                            <p class="type-seconds type-time">SECONDS</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>
+  <br>
+  <div id="count_container" class='container-fluid'>
+    <div class="countdown_clock"></div>
   </div>
-
-
+  <br>
+  <div id='new_container' class="container-fluid" style='display:none;'>
+    <h2>PURCHASE TOKENS</h2>
+    <button type="button" name="button">Buy Tokens</button>
+  </div>
 </div>

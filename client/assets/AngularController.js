@@ -1,15 +1,46 @@
 console.log('AngularController is here');
 app.controller('AngularController', ['$scope', '$routeParams', '$rootScope', function($scope, $routeParams, $rootScope) {
-    $('.countdown').final_countdown({
-          'start': new Date("Jan 22, 2017 15:37:25").getTime()/1000,
-          'end': new Date("Jan 5, 2018 11:37:25").getTime()/1000,
-          'now': new Date().getTime()/1000
-      });
+  var present_date = new Date().getTime()/1000;
+  var sellingdate = new Date('Jul 20, 2017 18:30:00').getTime()/1000;
+  var deadline = new Date("Jul 21, 2017 18:30:00").getTime()/1000;
+  var counter;
 
-  /*
-    OUR $scope.update function goes here <-- $scope because we need to access this method
-    with ng-submit or ng-click (from the form in the previous assignment).  Want to see
-    all of the friends when we get back including the updated on??
-    See Index in the previous controller.
-  */
+  $(function(){
+      FlipClock.Lang.Custom = { days:'Days', hours:'Hours', minutes:'Minutes', seconds:'Seconds' };
+
+      if (present_date <= sellingdate) {
+        var countdown = sellingdate - present_date;
+      }
+      else if (present_date > sellingdate) {
+        var countdown = deadline - present_date;
+        $('#new_container').show();
+      }
+
+      countdown = Math.max(1, countdown);
+
+      counter = new FlipClock($('.countdown_clock'), countdown, {
+        clockFace: 'DailyCounter',
+        countdown: true,
+        language: 'Custom',
+        callbacks:{
+          stop: function() {
+            $('#new_container').show();
+            counter.setTime(deadline-sellingdate);
+            counter.start();
+          }
+        }
+      });
+    });
+
+
+  // $(window).load(function(){
+  //     var timespan = countdown(new Date().getTime(), new Date("Jul 19, 2017 18:30:00").getTime(),  countdown.SECONDS);
+  //   // console.log(timespan);
+  //
+  //   var clock = $('.your-clock').FlipClock(timespan.seconds, {
+  //   countdown:true,
+  //   clockFace: 'DailyCounter'
+  //   });
+  //
+  //   })
 }]);
