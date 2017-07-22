@@ -5,6 +5,7 @@ $routeProvider
   .when('/',{
       templateUrl: 'partials/showmain.html'
   })
+
   // .when('/login',{
   //     templateUrl: 'partials/user.html',
   //     controller: 'userController'
