@@ -1,4 +1,4 @@
-<div ng-controller = "AngularController" id='control' class='container-fluid' align='center'>
+<div ng-controller = "AngularController" id='control' class='container-fluid'>
   <!-- <h1>HOW MUCH TIME BEFORE TOKENS WILL BE SOLD:</h1> -->
   <br>
   <div id="count_container" class='container'>
@@ -6,7 +6,22 @@
   </div>
   <br>
   <div id='new_container' class='container' style='display:none;'>
-    <h2>PURCHASE TOKENS</h2>
-    <button type="button" name="button">Buy Tokens</button>
+    <div class="agreements">
+      <h2>SEWNIQ User Token Terms and Agreements</h2>
+        <ol class='terms'>
+          <li class='term_val'>Your ETH funds must be sent from your personal Ethereum wallet such as MyEtherWallet, Parity, Metamask, Mist, Ledger or Jaxx</li>
+          <li class='term_val'>Please DO NOT send ETH funds from exchange wallets like Poloniex, Coinbase, Bitfinex, etc</li>
+          <li class='term_val'>Set Gas Limit to 250 000 (during high-load network)</li>
+          <li class='term_val'>Set the gas price at 60 GWEI (during high-load network)</li>
+          <li class='term_val'>SNG tokens will be sent immediately to the wallet from which the ETH arrived</li>
+        </ol>
+        <div id='terms_check' class="checkbox">
+        <label><input type="checkbox" value="">I agree to the <a href="#">Terms and Conditions</a>.</label>
+      </div>
+    </div>
+    <div class="captcha">
+
+    </div>
+    <!-- <button type="button" name="button">Buy Tokens</button> -->
   </div>
 </div>

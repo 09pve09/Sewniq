@@ -17,19 +17,38 @@
   text-align: center;
 }
 
-/*
-#count_container {
-  width: 100%;
-  position: relative;
-  left: 15%;
-  margin-left: auto;
-  margin-right: auto;
-}*/
-
-
 .countdown_clock {
   display: inline-block;
   width: auto;
+}
+
+@font-face {
+  font-family: "ab-chanel-couture";
+  src: url('../styles/font/ab-chanel-couture-regular.eot');
+  src: url('../styles/font/ab-chanel-couture-regular.eot?#iefix') format('embedded-opentype'),
+    url('../styles/font/ab-chanel-couture-regular.svg#AB Chanel Couture') format('svg'),
+    url('../styles/font/ab-chanel-couture-regular.woff') format('woff'),
+    url('../styles/font/ab-chanel-couture-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+.agreements h2 {
+  font-family: "ab-chanel-couture";
+}
+.terms {
+  font-size: 1.6vw;
+  text-align: justify;
+  font-family: "ab-chanel-couture";
+}
+
+.term_val {
+  font-family: "ab-chanel-couture";
+	direction: ltr;
+}
+
+#terms_check {
+  font-size: 1vw;
 }
 
 #myModal{
