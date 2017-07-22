@@ -22,7 +22,7 @@ h6 {
 }
 
 h3{
-  margin: 0 0 35px;
+  /*margin: 0 0 35px;*/
   /*margin-bottom: 100px;*/
   text-transform: uppercase;
   /*font-family: "didot", sans-serif;*/
@@ -43,7 +43,7 @@ p {
   }
 }
 a {
-  color: #42DCA3;
+  color: black;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -51,7 +51,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #1d9b6c;
+  color: black;
 }
 .light {
   font-weight: 400;
@@ -125,24 +125,30 @@ a:focus {
   }
 }
 
+@media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10) {
+  .container-custom{
+    width: 90%;
+  }
+}
+
 
 
 .intro {
   display: table;
   width: 100%;
   height: auto;
-  padding: 100px 0;
+  /*padding: 100px 0;*/
   text-align: center;
   color: black;
   background: url(/images/intro-bg-3.jpg) no-repeat bottom center scroll;
-  background-attachment: fixed;
   /*opacity: 0.5;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  /*display: block;*/
 }
-.intro .intro-body {
+.intro .intro-body  {
   display: table-cell;
   vertical-align: middle;
 }
@@ -152,68 +158,93 @@ a:focus {
   letter-spacing: 5px;
 }
 
-.intro .intro-body .intro-text {
+.intro .intro-body{
   font-size: 40px;
 }
+
+.intro-text{
+  font-size: 25px;
+}
+
 .intro{
   height: 450px;
 }
 
-@media (min-width: 768px) {
-  .intro {
-    height: 100%;
-    padding: 0;
-  }
-  .intro .intro-body .brand-heading {
-    font-size: 85px;
-    margin-bottom: 150px;
-    margin-right: 70px;
-    letter-spacing: 20px;
-  }
-  .intro .intro-body .intro-text {
-    font-size: 26px;
-  }
-  .intro-body{
-    background-color: lightgrey;
-    background: rgba(255, 255, 255, 0.5);
-  }
+.intro-text{
+  font-family: 'Caveat';
 }
-.btn-circle {
-  width: 65px;
-  height: 65px;
-  /*margin-top: 300px;*/
-  padding: 7px 16px;
-  border: 2px solid black;
-  border-radius: 100% !important;
-  font-size: 40px;
-  color: black;
-  background: transparent;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
+
+.intro-body{
+  background-color: lightgrey;
+  background: rgba(255, 255, 255, 0.5);
 }
-.btn-circle:hover,
-.btn-circle:focus {
-  outline: none;
-  color: black;
-  background: rgba(255, 255, 255, 0.1);
+
+.intro-footer{
+  display: table-footer-group;
+  background-color: lightgrey;
+  background: rgba(255, 255, 255, 0.5);
 }
-.btn-circle i.animated {
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-duration: 1s;
-  -moz-transition-property: -moz-transform;
-  -moz-transition-duration: 1s;
+
+.glyphicon-menu-down{
+  font-size: 6.5vw;
+  font-weight: 100;
+  -webkit-text-stroke: 0.6vw #FBFAFB;
+  transform: scale(1.5,1);
+
 }
-.btn-circle:hover i.animated {
+.glyphicon-menu-down:hover{
+  cursor: pointer;
+
+}
+.animated {
   -webkit-animation-name: pulse;
   -moz-animation-name: pulse;
-  -webkit-animation-duration: 1.5s;
-  -moz-animation-duration: 1.5s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -moz-animation-timing-function: linear;
 }
+
+
+@media (min-width: 768px) {
+  .intro {
+    height: 100%;
+    background-attachment: fixed;
+    padding: 0;
+  }
+  .intro .intro-body .brand-heading {
+    font-size: 85px;
+    /*margin-bottom: 150px;*/
+    margin-right: 70px;
+    letter-spacing: 20px;
+  }
+   .intro-text {
+    font-size: 40px;
+    margin-right: 70px;
+  }
+}
+
+@media (min-width:1600px){
+  .intro .intro-body .brand-heading {
+    background-attachment: fixed;
+    font-size: 110px;
+    margin-bottom: 40px;
+    margin-right: 0px;
+    letter-spacing: 20px;
+  }
+  .intro-text {
+   font-size: 60px;
+   margin-right: 0px;
+ }
+
+}
+
+
+
+
+
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(1);
