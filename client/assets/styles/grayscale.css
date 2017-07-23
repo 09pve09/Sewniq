@@ -167,7 +167,7 @@ a:focus {
 }
 
 .intro{
-  height: 450px;
+  height: 475px;
 }
 
 .intro-text{
@@ -273,6 +273,90 @@ a:focus {
     transform: scale(1);
   }
 }
+
+.about-section {
+  height: 475px;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+
+
+.video-container {
+    position: relative;
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    padding-bottom: 35%;
+
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+  .about-section {
+    height: 100%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .about-section {
+    width: 80%;
+  }
+}
+
+.graphics-section{
+  width: 100%;
+  height: 700px;
+}
+
+
+.team-section{
+  width: 100%;
+  height: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+}
+
+.member-section-wrapper{
+  /*background-color: green;*/
+  padding-top: 15px;
+}
+
+.member-section{
+  background-color: #FBFAFB;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+}
+
+.member-img{
+  width: 130px;
+  height: 130px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 1600px) {
+  .team-section{
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+}
+
+
+
+
+
+
+
+
+
 .content-section {
   padding-top: 100px;
 }
@@ -370,6 +454,6 @@ body {
 }
 
 footer{
-  background-color: black;
+  background-color: #333333;
   color: white;
 }
