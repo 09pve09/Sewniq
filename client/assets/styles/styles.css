@@ -34,9 +34,11 @@
   }
 
 .agreements h2 {
+  color: #333333;
   font-family: "ab-chanel-couture";
 }
 .terms {
+  color: #333333;
   font-size: 1.6vw;
   text-align: justify;
   font-family: "ab-chanel-couture";
@@ -48,7 +50,21 @@
 }
 
 #terms_check {
+  color: #333333;
   font-size: 1vw;
+}
+
+#captcha {
+  display: inline-block;
+  margin-left: auto;
+}
+
+.terms_condition:link{
+  color: black;
+}
+
+.terms_condition:hover{
+  color: grey !important;
 }
 
 #myModal{

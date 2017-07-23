@@ -32,15 +32,14 @@ app.controller('AngularController', ['$scope', '$routeParams', '$rootScope', fun
       });
     });
 
+    function captcha_callback() {
+      $('.captcha_button').prop("disabled", false);
+      // $('.token_button').show()
+    };
 
-  // $(window).load(function(){
-  //     var timespan = countdown(new Date().getTime(), new Date("Jul 19, 2017 18:30:00").getTime(),  countdown.SECONDS);
-  //   // console.log(timespan);
-  //
-  //   var clock = $('.your-clock').FlipClock(timespan.seconds, {
-  //   countdown:true,
-  //   clockFace: 'DailyCounter'
-  //   });
-  //
-  //   })
+    var captcha_response = recaptcha.getResponse();
+    
+    if (capptcha_response) {
+      $('.token_button').show();
+    }
 }]);
