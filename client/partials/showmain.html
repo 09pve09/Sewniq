@@ -1,4 +1,4 @@
-<div ng-controller = "AngularController" id='control' class='container-fluid'>
+<div ng-controller = "AngularController" id='control' class='container-fluid' ng-init="myFunction()">
   <!-- <h1>HOW MUCH TIME BEFORE TOKENS WILL BE SOLD:</h1> -->
   <br>
   <div id="count_container" class='container'>
@@ -15,24 +15,24 @@
           <li class='term_val'>Set the gas price at 60 GWEI (during high-load network)</li>
           <li class='term_val'>SNG tokens will be sent immediately to the wallet from which the ETH arrived</li>
         </ol>
-        <div id='terms_check' class="checkbox">
-          <label><input type="checkbox" value="">I agree to the <a href="#" class='terms_condition' data-toggle="modal" data-target="#myTerms">Terms and Conditions</a>.</label>
-        </div>
-        <br>
       <div id='captcha'>
-        <form class="captcha_form" name='captcha_form' ng-submit="captcha_callback()" method="post">
-          <div class="g-recaptcha" data-sitekey="6Le5BioUAAAAAKIKpUaEcoVKGJ0aXxQohLns_rUD"></div>
-          <div class="g-recaptcha" data-callback="captcha_callback" data-sitekey="6Le5BioUAAAAAKIKpUaEcoVKGJ0aXxQohLns_rUD"></div>
+        <form class="captcha_form" name="captcha_form" method="POST">
+          <div id='terms_check' class="checkbox">
+            <label><input type="checkbox" name='confirm' value='True' ng-model='confirm'>I agree to the <a href="#" class='terms_condition' data-toggle="modal" data-target="#myTerms">Terms and Conditions</a>.</label>
+          </div>
+          <br>
+          <div class="g-recaptcha" data-sitekey={{key}}></div>
           <br/>
-          <input class='captcha_button' type="submit" value="Submit" disabled>
+          <button class='captcha_button' ng-click='verify()'>Submit</button>
         </form>
       </div>
-      <button class='token_button' type="button" name="button" style='display:none;'>Buy Tokens</button>
+      <br>
+      <h2 class='token_address' style='display:none;'>Address: </h2>
     </div>
     <div id="myTerms" class="container modal fade" role="dialog">
-      <div class="modal-dialog">
+      <!-- <div class="modal-dialog"> -->
 
-        <!-- Modal content-->
+        <!-- Modal content -->
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
