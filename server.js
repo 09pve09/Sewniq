@@ -9,6 +9,8 @@ var express  = require( 'express' ),
 app.use( express.static( path.join( root, './client' )));
 app.use( express.static( path.join( root, 'bower_components' )));
 app.use( bp.json());
+app.use('/modules', express.static(__dirname + '/node_modules/'));
+
 require('./server/config/mongoose.js');
 require('./server/config/routes.js')(app);
 
