@@ -3,7 +3,7 @@ app.controller('AngularController', ['$scope', '$routeParams', '$rootScope', fun
   $scope.key = "6Le5BioUAAAAAKIKpUaEcoVKGJ0aXxQohLns_rUD";
 
   var present_date = new Date().getTime()/1000;
-  var sellingdate = new Date('Jul 21, 2017 16:40:00').getTime()/1000;
+  var sellingdate = new Date('Jul 24, 2017 13:29:00').getTime()/1000;
   var deadline = new Date("Aug 05, 2017 20:16:00").getTime()/1000;
   var counter;
 
@@ -16,6 +16,7 @@ app.controller('AngularController', ['$scope', '$routeParams', '$rootScope', fun
       else if (present_date > sellingdate) {
         var countdown = deadline - present_date;
         $('#new_container').show();
+        $('#count_title').hide()
       }
 
       countdown = Math.max(1, countdown);
@@ -27,6 +28,7 @@ app.controller('AngularController', ['$scope', '$routeParams', '$rootScope', fun
         callbacks:{
           stop: function() {
             $('#new_container').show();
+            $('#count_title').hide();
             counter.setTime(deadline-sellingdate);
             counter.start();
           }
@@ -35,15 +37,13 @@ app.controller('AngularController', ['$scope', '$routeParams', '$rootScope', fun
     });
 
     $scope.verify = function() {
-      console.log("INSIDE VERIFY FUNCTION")
-      console.log(typeof(grecaptcha.getResponse()));
-      console.log($scope.confirm);
       if(($scope.confirm == true) && (typeof(grecaptcha.getResponse()) === 'string')) {
         $(".token_address").show();
         $('#captcha').hide();
       }
       else{
         $('#captcha').show();
+
       }
     };
 
