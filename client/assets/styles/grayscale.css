@@ -108,6 +108,26 @@ a:focus {
 .navbar-custom .nav li.active a:hover {
   color: black;
 }
+
+.navbar-custom {
+  /*background-color: blue;*/
+}
+
+.navbar-brand{
+  overflow:auto;
+  padding: 0px;
+  width: 13.5vw;
+  height: 4vw;
+  /*background: url(/images/logo_1.png) no-repeat bo center;*/
+}
+
+.navbar-brand>img {
+  height: 100%;
+  /*padding: 10px;*/
+  /*width: auto;*/
+}
+
+
 @media (min-width: 768px) {
   .navbar-custom {
     padding: 20px 0;
@@ -118,6 +138,7 @@ a:focus {
     -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
   }
+
   .navbar-custom.top-nav-collapse {
     padding: 0;
     background: white;
@@ -140,7 +161,7 @@ a:focus {
   /*padding: 100px 0;*/
   text-align: center;
   color: #333333;
-  background: url(/images/intro-bg-3.jpg) no-repeat bottom center scroll;
+  background: url(/images/intro-bg-2.jpg) no-repeat bottom center scroll;
   /*opacity: 0.5;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -176,13 +197,13 @@ a:focus {
 
 .intro-body{
   background-color: lightgrey;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .intro-footer{
   display: table-footer-group;
   background-color: lightgrey;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .glyphicon-menu-down{
@@ -229,10 +250,12 @@ a:focus {
     padding: 0;
   }
   .intro .intro-body .brand-heading {
-    font-size: 85px;
-    /*margin-bottom: 150px;*/
-    margin-right: 70px;
-    letter-spacing: 20px;
+    font-size: 70px;
+    /*margin-bottom: 100px;*/
+    /*margin-right: 70px;*/
+    margin-right: 100px;
+    letter-spacing: 60px;
+
   }
    .intro-text {
     font-size: 40px;
@@ -244,9 +267,7 @@ a:focus {
   .intro .intro-body .brand-heading {
     background-attachment: fixed;
     font-size: 110px;
-    margin-bottom: 40px;
-    margin-right: 0px;
-    letter-spacing: 20px;
+    margin-right: 150px;
   }
   .intro-text {
    font-size: 60px;
