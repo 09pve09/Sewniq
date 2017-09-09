@@ -108,6 +108,7 @@ p {
 }
 
 
+
 li > .page-scroll {
   position: relative;
   color: red;
@@ -137,6 +138,12 @@ li > .page-scroll:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+
+.link{
+  color: white !important;
+  font-size: 2vw;
+
 }
 
 .light {
