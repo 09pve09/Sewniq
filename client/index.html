@@ -16,24 +16,26 @@
     <!-- Wowjs -->
     <script src="modules/wowjs/dist/wow.min.js"></script>
 
+    <!-- Chartjs -->
+    <script src="modules/chart.js/dist/Chart.js"></script>
+
     <!-- Web3js -->
-    <script src='web3/dist/web3.min.js'></script>
+    <!-- <script src='web3/dist/web3.min.js'></script> -->
 
     <!-- Custom styles and js -->
+    <link rel="stylesheet" href="assets/styles/main_styles.css">
     <link rel="stylesheet" href="assets/styles/styles.css">
-    <link rel="stylesheet" href="assets/styles/grayscale.css">
     <script src="assets/styles/myjQuery.js"></script>
 
     <!-- Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
-
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
     <!-- Countdown -->
     <link rel="stylesheet" href="assets/styles/flipclock.css">
     <script src="assets/styles/countdown/jquery.countdown.min.js" charset="utf-8"></script>
     <script src="assets/styles/countdown/flipclock.js" charset="utf-8"></script>
 
     <!-- CAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
     <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script> -->
 
     <!-- Angular from bower_components, otherwise find the CDN -->
@@ -47,9 +49,27 @@
 
 
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <div id="cover">
+      <div class="vertical-center-row">
+        <div class="container">
+          <img src="/images/sewniq-logo1.jpg">
+          <h3 class='loading'>Page loading</h3>
+        </div>
+      </div>
+          <!-- <div class="intro-body" >
+              <div class="container container-intro">
+                  <div class="row vertical-down">
+                      <div class="col-md-10 intro-text-container" >
+                          <h3 class="brand-heading">Sewniq</h3>
+                          <h5 class="intro-text">Page is loading</h5>
+                      </div>
+                  </div>
+              </div>
+          </div> -->
+    </div>
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container container-custom">
+        <div class="container container-navbar">
             <div class="navbar-header">
               <button type="button" id='menu_button' class="navbar-toggle" data-toggle="modal" data-target="#myModal">
                           <span class="sr-only">Toggle navigation</span>
@@ -68,10 +88,15 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#Link_1">Link_1</a>
+                        <a class="dropdown-toggle page-scroll" data-toggle="dropdown">WhitePaper</a>
+                        <ul class="dropdown-menu">
+                          <li class='text-center'><a href="files/whitepaper.pdf" target='pdf-frame'><h6 class='language-option'>English</h6></a></li>
+                          <li class='text-center'><a href="files/whitepaper.pdf" target='pdf-frame'><h6 class='language-option'>中文</h6></a></li>
+                          <li class='text-center'><a href="files/whitepaper.pdf" target='pdf-frame'><h6 class='language-option'>Русский</h6></a></li>
+                        </ul>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#Link_2">Link_2</a>
+                        <a class="page-scroll" href="#snq_token">SNQ Token</a>
                     </li>
                     <li>
                       <a data-toggle="modal" data-target="#myModal">
@@ -83,7 +108,7 @@
             <!-- /.navbar-collapse -->
         </div>
     </nav>
-    <button onclick="topFunction()" id="scrollupBtn" title="Go to top"><span class="glyphicon glyphicon-triangle-top"></span></button>
+    <button id="scrollupBtn" title="Go to top"><span class="glyphicon glyphicon-triangle-top"></span></button>
       <!-- Modal Menu -->
     <div class="modal fade" id="myModal" role="dialog" tabindex='-1'>
       <div class="modal-dialog modal-lg text-center">
@@ -98,12 +123,12 @@
     </div>
     <!-- Intro Header -->
     <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
+        <div class="intro-body" >
+            <div class="container container-intro">
+                <div class="row vertical-down">
+                    <div class="col-md-10 intro-text-container" >
                         <h3 class="brand-heading">Sewniq</h3>
-                        <!-- <p class="intro-text">Future of Fashion</p> -->
+                        <h5 class="intro-text">Future of fashion</h5>
                         <!-- <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a> -->
@@ -111,29 +136,77 @@
                 </div>
             </div>
         </div>
-        <div class='d-block intro-footer'>
-          <a href="#about" class='page-scroll'>
-            <span class="glyphicon glyphicon-menu-down animated"></span>
-          </a>
+        <div class='d-block intro-footer' >
+          <!-- <a href="#about" class='page-scroll'> -->
+            <!-- <span class="glyphicon glyphicon-menu-down animated"></span> -->
+            <!-- <img id='headerScroll' class='intro-footer-arrow' src="/images/arrow.png" alt="">
+          </a> -->
+          <img id='headerScroll' class='intro-footer-arrow' src="/images/arrow.png" alt="">
         </div>
     </header>
     <br>
     <br>
-    <div ng-view >
+    <div id='clock' ng-view >
     </div>
     <br>
     <br>
-    <div class="container about-section text-center ">
+    <div id="about" class="container about-section text-center">
       <h1>About Sewniq <i class="fa fa-chevron-down" style="font-size:24px"></i></h1>
       <p>
         We aspire to revolutionize the fashion industry by becoming the ultimate go-to source for everyone who is looking for that perfect garment and aim to satisfy each of our customer’s creative soul by realizing their ideas through our services at an affordable rate.
       </p>
       <div class="video-container">
-        <iframe src="//www.youtube.com/embed/yCOY82UdFrw" frameborder="0" class="video"></iframe>
+        <iframe src="//www.youtube.com/embed/tgQ60Gz31so" frameborder="0" class="video" allowfullscreen></iframe>
+      </div>
+      <div class="flowchart-wrapper text-center">
+        <img id='flowchart' src="images/sewniq flowchart.jpg" alt="">
       </div>
     </div>
-    <div class="container graphics-section text-center">
-      <h1>Graphics</h1>
+    <div id='snq_token' class="container token-section text-center">
+      <h1>SNQ Token</h1>
+            <p>SNQ is Sewniq’s decentralized token based on Ethereum protocol. The token serves the purpose of the
+      main trading currency on Sewniq platform.
+          </p>
+            <p>The initial coin offering of SNQ is a phase when early participants and supporters are able to fund the
+      project in exchange for SNQ token. </p>
+            <p>The SNQ token will act as a stock and will benefit the token holders proportionally to the success of
+      Sewniq.</p>
+      <div class="col-lg-12" >
+        <div class="col-md-6">
+          <h3>SNQ token sale</h3>
+          <div class="col-md-8 pie-content">
+            <canvas id="saleChart"></canvas>
+          </div>
+          <div class="col-md-4 pie-content">
+            <p class='pie-text'>At 9pm Central European Time (CET),
+Sewniq will offer 70% of its tokens for purchase
+to the purchasers. The remaining
+30% will be divided equally between bounty,
+early adopters & founders and legal entity.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3>Intended use of revenue</h3>
+          <div class="col-md-8 pie-content">
+            <canvas id="revenueChart"></canvas>
+          </div>
+          <div class="col-md-4 pie-content">
+            <p class='pie-text'>All funds will be used to further develop
+the project. 60% of the revenue
+raised will be used for research & development,
+and building infrastructure.
+The remaining 20% of the fund
+will be used for operation, 15% for
+marketing, and 5% for legal purposes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container roadmap-section text-center">
+      <h1>Roadmap</h1>
+        <div class="roadmap-wrapper text-center">
+          <img id='roadmap' src="images/roadmap.png" alt="">
+        </div>
     </div>
     <div class="container team-section text-center">
       <h1>Meet our team</h1>

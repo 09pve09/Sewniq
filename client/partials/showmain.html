@@ -3,13 +3,16 @@
   <div id="count_title">
     <h2>PRE-SALE on SNQ in: </h2>
   </div>
+  <div id="count_title_1">
+    <h2>SNQ token SALE:</h2>
+  </div>
   <div id="count_container" class='container'>
     <div class="countdown_clock"></div>
   </div>
   <br>
   <div id='new_container' class='container' style='display:none;'>
     <div class="agreements">
-      <h2>SEWNIQ User Token Terms and Agreements</h2>
+      <h2>How to buy SNQ Token</h3>
         <ol class='terms'>
           <li class='term_val'>Your ETH funds must be sent from your personal Ethereum wallet such as MyEtherWallet, Parity, Metamask, Mist, Ledger or Jaxx</li>
           <li class='term_val'>Please <b>DO NOT</b> send ETH funds from exchange wallets like Poloniex, Coinbase, Bitfinex, etc</li>
@@ -17,7 +20,7 @@
           <li class='term_val'>Set the gas price at 60 GWEI (during high-load network)</li>
           <li class='term_val'>SNQ tokens will be sent immediately to the wallet from which the ETH arrived</li>
         </ol>
-      <div id='captcha'>
+      <!-- <div id='captcha'>
         <form class="captcha_form" name="captcha_form" method="POST">
           <div id='terms_check' class="checkbox">
             <label><input type="checkbox" name='confirm' value='True' ng-model='confirm'>I agree to the <a  class='terms_condition' data-toggle="modal" data-target="#myTerms">Terms and Conditions</a>.</label>
@@ -27,14 +30,18 @@
           <br/>
           <button class='captcha_button' ng-click='verify()'>Submit</button>
         </form>
+      </div> -->
+      <div id='terms_check_div'>
+            <div id='terms_check' class="checkbox">
+              <label><input type="checkbox" name='confirm' value='True' ng-model='confirm'>I agree to the <a  class='terms_condition' href='/files/terms_and_conditions.pdf' target='pdf-frame'>Terms and Conditions</a>.</label>
+            </div>
+              <button type="button" ng-click='verify()'>Get Our Adress</button>
       </div>
       <br>
-      <h2 class='token_address' style='display:none;'>Address: </h2>
+      <h2 id='token_address' style='display:none;'>Address: </h2>
+      <p id='error_msg' style='display:none;'> You must agree to the terms and conditions first</p>
     </div>
-    <div id="myTerms" class="container modal fade" role="dialog">
-      <!-- <div class="modal-dialog"> -->
-
-        <!-- Modal content -->
+    <!-- <div id="myTerms" class="container modal fade" role="dialog">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -48,7 +55,7 @@
           </div>
         </div>
 
-        </div>
+      </div> -->
       </div>
     </div>
 
