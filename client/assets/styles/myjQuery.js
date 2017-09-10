@@ -17,6 +17,8 @@ $(document).ready(function(){
       }
   };
 
+
+
   $(window).scroll(collapseNavbar);
   $(document).ready(collapseNavbar);
 
@@ -52,6 +54,13 @@ $(document).ready(function(){
         scrollTop: $("#clock").offset().top
     }, 500);
 });
+
+//closemodal when clicking on the link
+  $(".link").click(function(){
+    $('#myModal').modal('hide');
+  })
+
+
 //CHARTS
 var saleCanvas = document.getElementById("saleChart").getContext('2d');
 var revenueCanvas = document.getElementById("revenueChart").getContext('2d');
