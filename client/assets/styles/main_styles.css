@@ -240,10 +240,19 @@ li > .page-scroll:hover:before {
   min-width: auto;
 }
 
-
-#myModal{
+#myModal, #videoModal{
   background-color: black;
   opacity: 0.85;
+}
+
+#videoModal{
+  vertical-align: middle;
+}
+
+.modal-video{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .modal-dialog {
@@ -282,6 +291,10 @@ li > .page-scroll:hover:before {
 
 #menu_list li{
   padding-bottom: 5vw;
+}
+
+.outline{
+  outline: 0;
 }
 
 .whitepaper_menu{
@@ -658,6 +671,10 @@ li > .page-scroll:hover:before {
   height: 60%;
 }
 
+.ceo{
+  margin: 0 auto;
+}
+
 .col-center{
   margin:0 auto;
 }
@@ -674,32 +691,29 @@ li > .page-scroll:hover:before {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.member-section-wrapper{
-  /*background-color: green;*/
-  padding-top: 15px;
+.justify-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.group-1-container{
-  display: table-row;
-}
-
-.group-1{
-  display: table-cell;
+.section-margin{
+  margin-bottom: 5%;
 }
 
 .member-section{
   background-color: #FBFAFB;
   padding: 10px 10px 10px 10px;
-  text-align: center;
   margin-bottom: 5%;
+  height: auto;
 }
 
-.member-img{
+/*.member-img{
   width: 130px;
   height: 130px;
   margin-top: 30px;
   margin-bottom: 5px;
-}
+}*/
 
 @media (min-width: 768px) {
   .team-section{
@@ -740,28 +754,6 @@ li > .page-scroll:hover:before {
   background-color: black;
 }
 
-
-
-
-/*ul.banner-social-buttons {
-  margin-top: 0;
-}
-@media (max-width: 1199px) {
-  ul.banner-social-buttons {
-    margin-top: 15px;
-  }
-}
-@media (max-width: 767px) {
-  ul.banner-social-buttons li {
-    display: block;
-    margin-bottom: 20px;
-    padding: 0;
-  }
-  ul.banner-social-buttons li:last-child {
-    margin-bottom: 0;
-  }
-}
-*/
 footer {
   padding: 50px 0;
 }

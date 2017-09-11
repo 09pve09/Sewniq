@@ -24,7 +24,8 @@
 
     <!-- Custom styles and js -->
     <link rel="stylesheet" href="assets/styles/main_styles.css">
-    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="assets/styles/clock.css">
+    <link rel="stylesheet" href="assets/styles/flip.css">
     <script src="assets/styles/myjQuery.js"></script>
 
     <!-- Fonts -->
@@ -85,7 +86,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#snq_token">SNQ Token</a>
+                        <a class="page-scroll" data-toggle="modal" data-target="#videoModal">Watch Video</a>
                     </li>
                     <li>
                       <a data-toggle="modal" data-target="#myModal">
@@ -98,10 +99,20 @@
         </div>
     </nav>
     <button id="scrollupBtn" title="Go to top"><span class="glyphicon glyphicon-triangle-top"></span></button>
+    <!-- Video Modal -->
+
+    <div class="modal fade" id="videoModal" role="dialog" tabindex='-1'>
+      <div class="video-container modal-video">
+        <iframe src="//www.youtube.com/embed/tgQ60Gz31so" frameborder="0" class="video" allowfullscreen></iframe>
+      </div>
+    </div>
+
+
       <!-- Modal Menu -->
+
     <div class="modal fade " id="myModal" role="dialog" tabindex='-1'>
       <div class="modal-dialog modal-lg container text-center">
-        <button type="button" class="close" data-dismiss="modal" style='color:white; padding-top: 1.5%; padding-right: 2%;'><span class="glyphicon glyphicon-remove gi-1-5x"></span></button>
+        <button type="button" class="close outline" data-dismiss="modal" style='color:white; padding-top: 1.5%; padding-right: 2%;'><span class="glyphicon glyphicon-remove gi-1-5x"></span></button>
             <ul id='menu_list'>
               <div class="dropdown">
                 <li>
@@ -122,6 +133,7 @@
             </ul>
       </div>
     </div>
+
     <!-- Intro Header -->
     <header class="intro">
         <div class="intro-body" >
@@ -209,80 +221,208 @@ marketing, and 5% for legal purposes.</p>
           <img id='roadmap' src="images/roadmap.png" alt="">
         </div>
     </div>
-    <div id='team' class="container team-section text-center">
+    <div id='team' class="container text-center">
       <h1>Meet our team</h1>
-      <div class="row  wow slideInUp">
-        <div class="col-md-12 member-section-wrapper wow slideInUp" data-wow-duration="700ms">
-          <div class="member-section box-shadow">
-            <img src="/images/robert_schneider.jpg" class="img-responsive img-circle member-img" style="display:inline" alt="Member" >
-            <h3>Robert Schneider</h3>
-            <h4>CEO/Founder</h4>
-            <p>Over 26 Years of Worldwide Customer Service in the Machine Tool Industry out of Switzerland, 14 Years Residential Real Estate, Commercial & Investments Local, National & International. Previously resided in Switzerland, Germany, France, Italy, England & Norway.
-Robert- Andre Schneider is originally from Switzerland, where he grew up and absolved all his schools. He also served in the Swiss Army Airborne Division where he obtained Special Forces Training amongst other. After successfully obtaining a diploma as a precision mechanic in the Diamond Tool Industry he furthered his knowledge and entered in to the field of Machine Tool Manufacturing, where after extensive training he became an After Sales/Service Engineer and traveled for over 27 years worldwide installing sheet metal punch presses as well as sheet metal laser equipment and other machinery!
-Later he moved to San Francisco and took on several projects throughout California for local customers as well as for a renowned laser manufacturer from Switzerland. He established a West Coast service center for Washington, Oregon, Northern and Southern California. In 2016 he came up with a revolutionary idea to create a platform that aims to change the fashion industry. He gave it a name “Sewniq”.
-</p>
+      <div class="justify-center section-margin">
+        <div class="flip-container col-md-5" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="member-section box-shadow front">
+              <div id='robert' class='member-img'></div>
+              <div class="member-title">
+                <h3>Robert Schneider</h3>
+                <h4>CEO/Founder</h4>
+              </div>
+            </div>
+            <div class="member-section box-shadow back">
+              <p>
+                Over 26 Years of Worldwide Customer Service in the Machine
+                Tool Industry out of Switzerland, 14 Years Residential Real Estate,
+                Commercial & Investments Local, National & International.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="group-1-container">
+      </div>
 
-        <div class="col-sm-4 member-section-wrapper group-1" data-wow-duration="700ms">
-          <div class="member-section box-shadow">
-            <img src="/images/earl_halderman.jpg" class="img-responsive img-circle member-img" style="display:inline" alt="Member" >
-            <h3>Earl Halderman</h3>
-            <h4>Project Management</h4>
-            <p>University of California Davis alumni. 5 years he spent working for The US Government Department of Justice being a program analyst in the past and a lead project manager in the present. Likes touching his beard and loves cats.
-</p>
+      <div class="flip-container col-md-4 section-margin" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+          <div class="member-section box-shadow front">
+            <div id='earl' class='member-img'></div>
+            <div class="member-title">
+              <h3>Earl Halderman</h3>
+              <h4>Project Management</h4>
+            </div>
+          </div>
+          <div class="member-section box-shadow back">
+            <p>University of California Davis alumni.
+               5 years he spent working for The US Government Department of
+              Justice being a program analyst in the past and a lead project manager in the present.
+              Likes touching his beard and loves cats.
+            </p>
           </div>
         </div>
-        <div class="col-sm-4 member-section-wrapper group-1" data-wow-duration="700ms">
-          <div class="member-section box-shadow">
-            <img src="/images/evgeniy_ovsiannikov.jpg" class="img-responsive img-circle member-img" style="display:inline" alt="Member" >
-            <h3>Evgenii Ovsiannikov</h3>
-            <h4>Business Development & Marketing</h4>
-            <p>Studied business and finances in finest schools of Europe. Worked for one of the largest oil company in the world. Moved to San Francisco in 2015 where he founded his own audit & assurance company.
-</p>
+      </div>
+
+      <div class="flip-container col-md-4 section-margin" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+          <div class="member-section box-shadow front">
+            <div id='evgenii' class='member-img'></div>
+            <div class="member-title">
+              <h3>Evgenii Ovsiannikov</h3>
+              <h4>Business Development & Marketing</h4>
+            </div>
+          </div>
+          <div class="member-section box-shadow back">
+            <p>Studied business and finances in finest schools of Europe.
+              Worked for one of the largest oil company in the world. Moved to
+              San Francisco in 2015 where he founded his own audit & assurance
+              ompany. He believes that decentralized technology is the future.
+            </p>
           </div>
         </div>
-        <div class="col-sm-4 member-section-wrapper group-1" data-wow-duration="700ms">
-          <div class="member-section box-shadow">
-            <img src="/images/ydel_jiang.jpg" class="img-responsive img-circle member-img" style="display:inline" alt="Member" >
-            <h3>Ydel Jiang</h3>
-            <h4>Design & Implementation</h4>
-            <p>Born in China, raised in Singapore, she found her passion in fashion and made it her profession. She majored in fashion design in San Francisco and worked in China for the largest data management company of fashion industry in the world.
-</p>
+      </div>
+
+      <div class="flip-container col-md-4 section-margin" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+          <div class="member-section box-shadow front">
+            <div id='ydel' class='member-img'></div>
+            <div class="member-title">
+              <h3>Ydel Jiang</h3>
+              <h4>Design & Implementation</h4>
+            </div>
+          </div>
+          <div class="member-section box-shadow back">
+            <p>Born in China, raised in Singapore, she found her passion in
+              fashion and made it her profession. She majored in fashion design
+              in San Francisco and worked in China for the largest data management
+              company of fashion industry in the world.
+            </p>
           </div>
         </div>
+      </div>
+
+      <div class="flip-container col-md-4 section-margin" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+          <div class="member-section box-shadow front">
+            <div id='alex' class='member-img'></div>
+            <div class="member-title">
+              <h3>Alex Chupin</h3>
+              <h4>Lead Developer</h4>
+            </div>
+          </div>
+          <div class="member-section box-shadow back">
+            <p>Engineering genius. Having a top notch technical
+              education in computational fluid he worked for many great
+              companies, including working in a field of physics and technology
+              of nanostructures. Sold his start-up for a large sum of money, been
+              retired for years, but found Sewniq exciting enough to start coding again.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-container col-md-4 section-margin" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+          <div class="member-section box-shadow front">
+            <div id='connie' class='member-img'></div>
+            <div class="member-title">
+              <h3>Connie Chu</h3>
+              <h4>Back-End Software Engineer</h4>
+            </div>
+          </div>
+          <div class="member-section box-shadow back">
+            <p>University of California Davis alumni. Achieved great heights
+               in chemical engineering, was part of the research team in
+               Chevron,  but found her true passion in coding.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-container col-md-4 section-margin" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+          <div class="member-section box-shadow front">
+            <div id='vic' class='member-img'></div>
+            <div class="member-title">
+              <h3>Victor Park</h3>
+              <h4>Front-End/Ui Web Developer</h4>
+            </div>
+          </div>
+          <div class="member-section box-shadow back">
+            <p>With 2 years of experience and more than 200 projects
+              created from scratch,  coding is Victor’s one and only passion,
+              he was a  self taught freelancer before coming to the US 6 years ago.
+              Since then he worked in many start-ups and achieved great heights in coding.
+              Been following cryptocurrency scene since 2009, believes in it’s future and
+              high potential to make world a better place.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <!-- <div id='team' class="container team-section text-center">
+      <h1>Meet our team</h1>
+        <div class="group-1-container" style='background-color:grey;'>
+          <div class="col-sm-4 member-section-wrapper ">
+            <div class="member-section box-shadow row-eq-height">
+              <img src="/images/earl_halderman.jpg" class="img-responsive img-circle member-img" style="display:inline" alt="Member" >
+              <h3>Earl Halderman</h3>
+              <h4>Project Management</h4>
+              <p>University of California Davis alumni. 5 years he spent working for The US Government Department of Justice being a program analyst in the past and a lead project manager in the present. Likes touching his beard and loves cats.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-4 member-section-wrapper ">
+            <div class="member-section box-shadow row-eq-height">
+              <img src="/images/evgeniy_ovsiannikov.jpg" class="img-responsive img-circle member-img" style="display:inline" alt="Member" >
+              <h3>Evgenii Ovsiannikov</h3>
+              <h4>Business Development & Marketing</h4>
+              <p>Studied business and finances in finest schools of Europe. Worked for one of the largest oil company in the world. Moved to San Francisco in 2015 where he founded his own audit & assurance company. He believes that decentralized technology is the future.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-4 member-section-wrapper ">
+            <div class="member-section box-shadow row-eq-height">
+              <img src="/images/ydel_jiang.jpg" class="img-responsive img-circle member-img" style="display:inline" alt="Member" >
+              <h3>Ydel Jiang</h3>
+              <h4>Design & Implementation</h4>
+              <p>Born in China, raised in Singapore, she found her passion in fashion and made it her profession. She majored in fashion design in San Francisco and worked in China for the largest data management company of fashion industry in the world.
+              </p>
+            </div>
+          </div>
         </div>
 
 
-        <div class="col-sm-4 member-section-wrapper" data-wow-duration="700ms">
+        <div class="col-sm-4 member-section-wrapper">
           <div class="member-section box-shadow">
             <img src="/images/alex_chupin.jpg" class="img-responsive img-circle member-img" style="display:inline" alt="Member" >
             <h3>Alex Chupin</h3>
             <h4>Lead Developer</h4>
             <p>Engineering genius. Having a top notch technical education in computational fluid he worked for many great companies, including working in a field of physics and technology of nanostructures. Sold his start-up for a large sum of money, been retired for years, but found Sewniq exciting enough to start coding again.
-</p>
+            </p>
           </div>
         </div>
-        <div class="col-sm-4 member-section-wrapper" data-wow-duration="700ms">
+        <div class="col-sm-4 member-section-wrapper">
           <div class="member-section box-shadow">
             <img src="/images/connie_chu.jpg" class="img-responsive img-circle member-img" style="display:inline" alt="Member" >
             <h3>Connie Chu</h3>
             <h4>Back-End Software Engineer</h4>
             <p>University of California Davis alumni. Achieved great heights in chemical engineering, was part of the research team in Chevron,  but found her true passion in coding.
-</p>
+            </p>
           </div>
         </div>
-        <div class="col-sm-4 member-section-wrapper" data-wow-duration="700ms">
+        <div class="col-sm-4 member-section-wrapper">
           <div class="member-section box-shadow">
             <img src="/images/victor_pak.jpg" class="img-responsive img-circle member-img" style="display:inline" alt="Member" >
             <h3>Victor Park</h3>
             <h4>Front-End/Ui Web Developer</h4>
             <p>With 2 years of experience and more than 200 projects created from scratch,  coding is Victor’s one and only passion, he was a  self taught freelancer before coming to the US 6 years ago. Since then he worked in many start-ups and achieved great heights in coding. Been following cryptocurrency scene since 2009, believes in it’s future and high potential to make world a better place.
-</p>
+            </p>
         </div>
       </div>
-    </div>
+    </div> -->
     <footer>
         <div id='contacts' class="container text-center">
             <p>Copyright &copy; Sewniq 2017</p>

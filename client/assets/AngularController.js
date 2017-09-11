@@ -5,7 +5,7 @@ app.controller('AngularController', ['$scope', '$routeParams', '$rootScope', fun
 
 
  var present_date = new Date().getTime()/1000;
- var sellingdate = new Date('Sept 4, 2017 13:29:00').getTime()/1000;
+ var sellingdate = new Date('Sept 15, 2017 13:29:00').getTime()/1000;
  var deadline = new Date("Nov 10, 2017 20:16:00").getTime()/1000;
  var counter;
 
@@ -48,7 +48,7 @@ app.controller('AngularController', ['$scope', '$routeParams', '$rootScope', fun
      }
      else{
        if( $('#token_address').css('display') == 'block') {
-         
+
        }
        else{
          $('#error_msg').show();
