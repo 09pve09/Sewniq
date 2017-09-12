@@ -55,7 +55,7 @@ p {
   position: fixed;
   height: 100%;
   width: 100%;
-  background: #F8F6F7;
+  background: #E0E0E0;
   z-index:9999;
   text-align: center;
   display: table;
@@ -162,7 +162,7 @@ li > .page-scroll:hover:before {
 }
 
 .glyphicon-menu-hamburger{
-  -webkit-text-stroke: 0.1vw #F8F6F7;
+  -webkit-text-stroke: 0.1vw #E0E0E0;
 
 }
 .glyphicon-menu-hamburger:hover{
