@@ -86,28 +86,35 @@
 
 #robert{
   background: url(/images/robert_schneider.jpg) 0 0 no-repeat;
+  background-size: cover;
 }
 
 #earl{
   background: url(/images/earl_halderman.jpg) 0 0 no-repeat;
+  background-size: cover;
 }
 
 #evgenii{
   background: url(/images/evgeniy_ovsiannikov.jpg) 0 0 no-repeat;
+  background-size: cover;
 }
 
 #ydel{
   background: url(/images/ydel_jiang.jpg) 0 0 no-repeat;
+  background-size: cover;
 }
 
 #alex{
   background: url(/images/alex_chupin.jpg) 0 0 no-repeat;
+  background-size: cover;
 }
 
 #connie{
   background: url(/images/connie_chu.jpg) 0 0 no-repeat;
+  background-size: cover;
 }
 
 #victor{
   background: url(/images/victor_pak.jpg) 0 0 no-repeat;
+  background-size: cover;
 }
