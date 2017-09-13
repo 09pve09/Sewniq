@@ -4,10 +4,6 @@ $(window).on('load', function() {
 
 
 $(document).ready(function(){
-  console.log("jquery is here!");
-  // slideUpanimation with wow.js
-  new WOW().init();
-
   // jQuery to collapse the navbar on scroll
   function collapseNavbar() {
       if ($(".navbar").offset().top > 50) {
@@ -17,6 +13,9 @@ $(document).ready(function(){
       }
   };
 
+  $( ".link" ).click(function() {
+    goToByScroll($(this).attr('href'));
+  })
 
 
   $(window).scroll(collapseNavbar);
