@@ -39,9 +39,19 @@ h1,h2,h3,h4,h5,h6:hover{
   margin-bottom: 10%;
 }
 
-.separator{
-  width: 100%;
-  height: 70%;
+.quote{
+  font-family: "Libre Baskerville", "Times New Roman", sans-serif;
+  letter-spacing: 0.3vw;
+  font-style: italic;
+  color: #333333;
+}
+
+.quote-autor{
+  font-family: "Dosis", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3vw;
+  font-weight: lighter;
+  color: #333333;
 }
 
 #separator-1{
@@ -51,6 +61,20 @@ h1,h2,h3,h4,h5,h6:hover{
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+}
+
+#separator-2{
+  background: url(/images/separator-2.jpg) no-repeat bottom center scroll;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.separator{
+  width: 100%;
+  height: 70%;
 }
 
 a:hover{
@@ -71,6 +95,22 @@ p {
   font-size: 18px;
   line-height: 1.5;
 }
+
+@media (max-width: 1600px) and (orientation: portrait){
+  #separator-1{
+    background: url(/images/separator-1-portrait.jpg) no-repeat bottom center scroll;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+  .separator{
+    height: 60%;
+  }
+}
+
+
 @media (min-width: 768px) {
   p {
     margin: 0 0 35px;
@@ -724,7 +764,7 @@ li > .page-scroll:hover:before {
 
 @media (min-width: 768px) {
   .about-section {
-    padding-top: 20%;
+    padding-top: 10%;
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -766,7 +806,7 @@ li > .page-scroll:hover:before {
 
 @media (min-width: 768px) {
   .token-section {
-    padding-top: 20%;
+    padding-top: 10%;
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -788,7 +828,7 @@ li > .page-scroll:hover:before {
 
 @media (min-width: 768px) {
   .roadmap-section{
-    padding-top: 20%;
+    padding-top: 5%;
   }
 }
 
@@ -853,7 +893,7 @@ li > .page-scroll:hover:before {
   .team-section{
     padding-left: 7%;
     padding-right: 7%;
-    padding-top: 20%;
+    padding-top: 10%;
   }
 }
 
@@ -954,4 +994,15 @@ footer{
     height: 40%;
     cursor: pointer;
   }
+}
+
+
+#Carousel-quotes-1{
+  width: 50%;
+	height: 50%;
+  margin: 0 auto;
+  top: 25%;
+  padding-top: 5%;
+  position: relative;
+  text-align: center;
 }
