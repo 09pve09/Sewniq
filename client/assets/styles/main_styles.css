@@ -99,19 +99,19 @@ p {
 @media (max-width: 1600px) and (orientation: portrait){
   #separator-1{
     background: url(/images/separator-1-portrait.jpg) no-repeat bottom center scroll;
-    background-attachment: fixed;
+    /*background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;
+    -o-background-size: cover;*/
   }
   #separator-2{
     background: url(/images/separator-2-portrait.jpg) no-repeat bottom center scroll;
-    background-attachment: fixed;
+    /*background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;
+    -o-background-size: cover;*/
   }
   .separator{
     height: 60%;
