@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Animate.css /modules renamed in server.js -->
@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="assets/styles/main_styles.css">
     <link rel="stylesheet" href="assets/styles/clock.css">
     <link rel="stylesheet" href="assets/styles/flip.css">
+    <link rel="stylesheet" href="assets/styles/youtube-background.css">
     <script src="assets/styles/myjQuery.js"></script>
 
     <!-- Fonts -->
@@ -81,7 +82,7 @@
                         <ul class="dropdown-menu">
                           <li class='text-center'><a href="files/Whitepaper_english.pdf" target="_blank"><h6 class='language-option'>English</h6></a></li>
                           <li class='text-center'><a href="files/Whitepaper_chinese.pdf" target="_blank"><h6 class='language-option'>中文</h6></a></li>
-                          <li class='text-center'><a href="files/Whitepaper_russian.pdf" target="_blank"><h6 class='language-option'>Русский</h6></a></li>
+                          <li class='text-center'><a href="files/Whitepaper_russian.pdf" target="_blank"><h6 class='language-option' style='font-weight:lighter'>Русский</h6></a></li>
                         </ul>
                     </li>
                     <li>
@@ -165,6 +166,24 @@
     <div id='clock' ng-view >
     </div>
 
+    <!-- <div class="container" style='height: 40%;'>
+      <div class="video-background">
+        <div class="video-foreground">
+          <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div id="vidtop-content">
+        <div class="vid-info">
+	        <h1>YouTube Fullscreen Background Demo</h1>
+	        <p>The International Space Station orbits the Earth every 92 minutes, with its crew seeing a sunrise 15 times a day. It exists as a scientific, educational, and engineering platform in low orbit, 330 to 435 kilometres above the Earth.
+          <p>Original timelapse by Riccardo Rossi (ISAA), used under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Raw photos courtesy of http://eol.jsc.nasa.gov/
+	        <a href="/500/Use-YouTube-Videos-as-Fullscreen-Web-Page-Backgrounds">Full article</a>
+        </div>
+      </div>
+    </div> -->
+
+
     <div id="about" class="container about-section text-center">
       <h1 class='header-margin-bot'><span class='text-padding'>About Sewniq <i class="fa fa-chevron-down" style="font-size:24px"></i></span></h1>
       <p>
@@ -209,41 +228,6 @@
             </p>
           </div>
 
-          <div class="item">
-            <p class='quote'>
-              I don't do fashion, I am fashion.
-            </p>
-            <p class='quote-autor'>
-              Coco Chanel
-            </p>
-          </div>
-
-          <div class="item">
-            <p class='quote'>
-              Fashion fades, style is eternal.
-            </p>
-            <p class='quote-autor'>
-              Yves Saint Laurent
-            </p>
-          </div>
-
-          <div class="item">
-            <p class='quote'>
-              Dress like you are already famous.
-            </p>
-            <p class='quote-autor'>
-              Anonymous
-            </p>
-          </div>
-
-          <div class="item">
-            <p class='quote'>
-              Sewniq is great, I think the concept they are trying to carry out is mind blowing, potentially world changing.
-            </p>
-            <p class='quote-autor'>
-              Michael Garcia
-            </p>
-          </div>
         </div>
       </div>
     </div>
@@ -293,9 +277,46 @@ marketing, and 5% for legal purposes.</p>
     </div>
 
     <div id='separator-2' class="separator">
+      <div id="Carousel-quotes-1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="item active">
+            <p class='quote'>
+              I don't do fashion, I am fashion.
+            </p>
+            <p class='quote-autor'>
+              Coco Chanel
+            </p>
+          </div>
 
+          <div class="item">
+            <p class='quote'>
+              Fashion fades, style is eternal.
+            </p>
+            <p class='quote-autor'>
+              Yves Saint Laurent
+            </p>
+          </div>
+
+          <div class="item">
+            <p class='quote'>
+              Dress like you are already famous.
+            </p>
+            <p class='quote-autor'>
+              Anonymous
+            </p>
+          </div>
+
+          <div class="item">
+            <p class='quote'>
+              Sewniq is great, I think the concept they are trying to carry out is mind blowing, potentially world changing.
+            </p>
+            <p class='quote-autor'>
+              Michael Garcia
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-
 
     <div class="container text-center team-section">
     <h1 class='header-margin-bot'><span class='text-padding'>Meet our team</span></h1>
@@ -440,12 +461,15 @@ marketing, and 5% for legal purposes.</p>
     <footer>
         <div id='contacts' class="container text-center">
           <ul id="contact_links">
-            <li><a class="footer-link" target="_blank" href="https://github.com/09pve09"><img class="icon" src="images/telegram.png" alt=""></a></li>
-            <li><a class="footer-link" target="_blank" href="https://www.facebook.com/victor.park.5473"><img class="icon" src="images/facebook.png" alt=""></a></li>
-            <li><a class="footer-link" target="_blank" href="https://www.linkedin.com/in/victor-pak/"><img class="icon" src="images/twitter.png" alt=""></a></li>
+            <li><a target="_blank" href="https://www.t.me/Sewniq"><img class="icon" src="images/telegram.png" alt=""></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/Sewniq"><img class="icon" src="images/facebook.png" alt=""></a></li>
+            <li><a target="_blank" href="https://www.twitter.com/Sewniq"><img class="icon" src="images/twitter.png" alt=""></a></li>
+
             <!-- <li><a class="footer-link" href="mailto:09pve09@gmail.com"><img class="icon" src="assets/images/gmail.png" alt=""></a></li> -->
 
           </ul>
+            <a class='footer-link'href="mailto:support@sewniq.com">support@sewniq.com</a>
+            </br>
             <p>Copyright &copy; Sewniq 2017</p>
         </div>
     </footer>

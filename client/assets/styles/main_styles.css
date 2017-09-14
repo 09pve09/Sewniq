@@ -105,6 +105,14 @@ p {
     background-size: cover;
     -o-background-size: cover;
   }
+  #separator-2{
+    background: url(/images/separator-2-portrait.jpg) no-repeat bottom center scroll;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
   .separator{
     height: 60%;
   }
@@ -513,9 +521,10 @@ li > .page-scroll:hover:before {
 
 
 
-
-.vertical-down{
-  padding-top: 10%;
+@media (max-width: 568px) and (orientation: portrait) {
+  .vertical-down{
+    padding-top: 10%;
+  }
 }
 
 .intro-text-container{
@@ -653,6 +662,10 @@ li > .page-scroll:hover:before {
   }
   #headerScroll{
     display:initial;
+  }
+
+  #headerScroll:hover{
+    cursor: pointer;
   }
 
   .intro-text-container{
@@ -988,6 +1001,18 @@ footer{
   filter: brightness(3);
 }
 
+.footer-link{
+  font-size: 1.5vw;
+  color: #c2c3c5;
+}
+
+.footer-link:hover{
+  color: white;
+  text-decoration: none;
+}
+
+
+
 @media (min-width: 760px) {
   .icon{
     width: 40%;
@@ -997,7 +1022,7 @@ footer{
 }
 
 
-#Carousel-quotes-1{
+#Carousel-quotes-1, #Carousel-quotes-2{
   width: 50%;
 	height: 50%;
   margin: 0 auto;

@@ -17,6 +17,7 @@ $(document).ready(function(){
     goToByScroll($(this).attr('href'));
   })
 
+  $('#Carousel-quotes-1').carousel();
 
   $(window).scroll(collapseNavbar);
   $(document).ready(collapseNavbar);
@@ -116,4 +117,7 @@ revenue_data = {
       }
   });
 
+
+  // YOutube BackGround
+  
 });
