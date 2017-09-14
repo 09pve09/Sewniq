@@ -98,15 +98,18 @@ p {
 
 @media (max-width: 1600px) and (orientation: portrait){
   #separator-1{
-    background: url(/images/separator-1-portrait.jpg) no-repeat bottom center scroll;
-    /*background-attachment: fixed;
-    -webkit-background-size: cover;
+    background: url(/images/separator-1-portrait.jpg) no-repeat center scroll;
+    *background-attachment: initial !important;
+    background-size: 100%;
+    /*-webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;*/
   }
   #separator-2{
-    background: url(/images/separator-2-portrait.jpg) no-repeat bottom center scroll;
+    background: url(/images/separator-2-portrait.jpg) no-repeat center scroll;
+    *background-attachment: initial !important;
+    background-size: 100%;
     /*background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -591,48 +594,6 @@ li > .page-scroll:hover:before {
   cursor: pointer;
 
 }
-.animated_infinite {
-  -webkit-animation-name: pulse;
-  -moz-animation-name: pulse;
-  -webkit-animation-duration: 3s;
-  -moz-animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-}
-
-.animated {
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-    -webkit-amation-iteration-count: 1;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-}
-
-@keyframes bounce {
-	0%, 100%, 20%, 50%, 80% {
-		-webkit-transform: translateY(0);
-		-ms-transform:     translateY(0);
-		transform:         translateY(0)
-	}
-	40% {
-		-webkit-transform: translateY(-30px);
-		-ms-transform:     translateY(-30px);
-		transform:         translateY(-30px)
-	}
-	60% {
-		-webkit-transform: translateY(-15px);
-		-ms-transform:     translateY(-15px);
-		transform:         translateY(-15px)
-	}
-}
-
 
 .intro-footer-arrow:hover {
   cursor: pointer;
@@ -672,9 +633,13 @@ li > .page-scroll:hover:before {
     margin-left: 15%;
   }
 }
+@media (max-width: 1024px) and (orientation: portrait){
+  .intro {
+    background-attachment: initial !important;
+  }
+}
 
-
-@media (min-width: 768px) {
+@media (min-width: 768px){
   #movieBtn{
     display: none;
   }
@@ -682,10 +647,6 @@ li > .page-scroll:hover:before {
     height: 100%;
     background-attachment: fixed;
     padding: 0;
-  }
-  .intro .intro-body .brand-heading {
-  }
-   .intro-text {
   }
 }
 
@@ -706,38 +667,6 @@ li > .page-scroll:hover:before {
 @media (min-width: 768px) {
   #clock{
     padding-top: 10%;
-  }
-}
-
-
-
-
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@-moz-keyframes pulse {
-  0% {
-    -moz-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -moz-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-  100% {
-    -moz-transform: scale(1);
-    transform: scale(1);
   }
 }
 
