@@ -8,9 +8,9 @@
     <meta property="og:title" content="The Future Of Fashion" />
     <meta property="og:image" content="/images/logo_2.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Animate.css /modules renamed in server.js -->
@@ -115,7 +115,7 @@
 
     <div class="modal fade " id="myModal" role="dialog" tabindex='-1'>
       <div class="modal-dialog modal-lg container text-center">
-        <button type="button" class="close outline" data-dismiss="modal"><img src="/images/close.png" alt=""></button>
+        <button id='closeBtn' type="button" class="close outline" data-dismiss="modal"><img src="/images/close.png" alt=""></button>
             <ul id='menu_list'>
               <div class="dropdown">
                 <li>
@@ -166,19 +166,10 @@
     <div id='clock' ng-view >
     </div>
 
-    <!-- <div class="container" style='height: 40%;'>
+    <!-- <div class="" style='height: 60%; background-color:blue;'>
       <div class="video-background">
-        <div class="video-foreground">
-          <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div id="vidtop-content">
-        <div class="vid-info">
-	        <h1>YouTube Fullscreen Background Demo</h1>
-	        <p>The International Space Station orbits the Earth every 92 minutes, with its crew seeing a sunrise 15 times a day. It exists as a scientific, educational, and engineering platform in low orbit, 330 to 435 kilometres above the Earth.
-          <p>Original timelapse by Riccardo Rossi (ISAA), used under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Raw photos courtesy of http://eol.jsc.nasa.gov/
-	        <a href="/500/Use-YouTube-Videos-as-Fullscreen-Web-Page-Backgrounds">Full article</a>
+        <div class="video-foreground" style='background-color:green;'>
+          <iframe src="https://www.youtube.com/embed/vOxmsqd8f58?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
     </div> -->
@@ -269,7 +260,7 @@ marketing, and 5% for legal purposes.</p>
         </div>
       </div>
     </div>
-    <div  class="container roadmap-section text-center">
+    <div id='roadmap_section'  class="container roadmap-section text-center">
       <h1 class='header-margin-bot'><span class='text-padding'>Roadmap</span></h1>
         <div class="roadmap-wrapper text-center">
           <img id='roadmap' src="images/roadmap.png" alt="">
@@ -318,7 +309,7 @@ marketing, and 5% for legal purposes.</p>
       </div>
     </div>
 
-    <div class="container text-center team-section">
+    <div id='team' class="container text-center team-section">
     <h1 class='header-margin-bot'><span class='text-padding'>Meet our team</span></h1>
       <div class="justify-center section-margin">
         <div class="flip-container col-md-5" ontouchstart="this.classList.toggle('hover');">

@@ -13,10 +13,6 @@ $(document).ready(function(){
       }
   };
 
-  $( ".link" ).click(function() {
-    goToByScroll($(this).attr('href'));
-  })
-
   $('#Carousel-quotes-1').carousel();
 
   $(window).scroll(collapseNavbar);
@@ -53,12 +49,31 @@ $(document).ready(function(){
     $('html, body').animate({
         scrollTop: $("#clock").offset().top
     }, 500);
-});
+  });
 
-//closemodal when clicking on the link
-  $(".link").click(function(){
-    $('#myModal').modal('hide');
+//closemodal and scrolling to the element when clicking on the link
+  $( ".link" ).click(function() {
+    var closeBtn = document.getElementById("closeBtn");
+    simulateClick(closeBtn);
+    goToByScroll($(this).attr('href'));
   })
+
+
+// Helper functions
+  var simulateClick = function (elem) {
+    console.log('simulating..');
+    console.log(elem);
+    var evt = new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+        view: window
+    });
+    var canceled = !elem.dispatchEvent(evt);
+  };
+
+  function goToByScroll(id){
+      $('html,body').animate({scrollTop: $(id).offset().top},'fast');
+  }
 
 
 //CHARTS
@@ -119,5 +134,5 @@ revenue_data = {
 
 
   // YOutube BackGround
-  
+
 });
