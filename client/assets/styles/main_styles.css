@@ -931,7 +931,7 @@ footer{
 }
 
 .footer-link{
-  font-size: 1.5vw;
+  font-size: 4vw;
   color: #c2c3c5;
 }
 
@@ -943,6 +943,11 @@ footer{
 
 
 @media (min-width: 760px) {
+  .footer-link{
+    font-size: 1.5vw;
+    color: #c2c3c5;
+  }
+
   .icon{
     width: 40%;
     height: 40%;

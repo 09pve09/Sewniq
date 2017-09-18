@@ -1,4 +1,4 @@
-console.log('UsersFactory is here');
+// console.log('UsersFactory is here');
 // var currentUser;
 app.factory('usersFactory', ['$http', function($http) {
   var users = [];

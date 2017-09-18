@@ -1,4 +1,4 @@
-console.log('AngularController is here');
+// console.log('AngularController is here');
 app.controller('AngularController', ['$scope', '$routeParams', '$rootScope', function($scope, $routeParams, $rootScope) {
  $scope.key = "6Le5BioUAAAAAKIKpUaEcoVKGJ0aXxQohLns_rUD";
 
