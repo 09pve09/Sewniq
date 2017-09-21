@@ -41,16 +41,29 @@
 .agreements h2 {
   color: #333333;
 }
+
+.bold{
+  font-weight: bold;
+}
+
+
 .terms {
   color: #333333;
   font-size: 1.6vw;
-  text-align: justify;
+   text-transform: uppercase;
+  /*display: inline-block;*/
+  text-align: left;
+  padding-left: 0 !important;
   font-family: 'Crimson Text', serif;
+}
+
+.margin-left{
+  padding-left: 9%;
 }
 
 .term_val {
   font-family: 'Crimson Text', serif;
-	direction: ltr;
+	list-style-type: none;
 }
 
 #terms_check {
