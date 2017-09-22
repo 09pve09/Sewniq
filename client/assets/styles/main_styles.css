@@ -82,12 +82,8 @@ a:hover{
 }
 
 h3{
-  /*margin: 0 0 35px;*/
-  /*margin-bottom: 100px;*/
   text-transform: uppercase;
-  /*font-family: "didot", sans-serif;*/
   font-weight: 300;
-  /*letter-spacing: 20px;*/
 }
 
 p {
@@ -101,20 +97,13 @@ p {
     background: url(/images/separator-1-portrait.jpg) no-repeat center scroll;
     *background-attachment: initial !important;
     background-size: 100%;
-    /*-webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;*/
+
   }
   #separator-2{
     background: url(/images/separator-2-portrait.jpg) no-repeat center scroll;
     *background-attachment: initial !important;
     background-size: 100%;
-    /*background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;*/
+
   }
   .separator{
     height: 60%;
@@ -324,12 +313,6 @@ li > .page-scroll:hover:before {
   opacity: 0.85;
 }
 
-#videoModal{
-  /*display: flex;
-  justify-content: center;
-  align-items: center;*/
-}
-
 .modal-video{
   height: 100%;
   width: 100%;
@@ -351,10 +334,6 @@ li > .page-scroll:hover:before {
   border-radius: 0;
 }
 
-.modal-content{
-  /*background-color: black;*/
-}
-
 #menu_button{
   padding: 0;
   border: none;
@@ -370,6 +349,7 @@ li > .page-scroll:hover:before {
   font-size: 2em;
   list-style-type: none;
   padding-top: 35%;
+  padding-left: 5%;
 }
 
 #menu_list li{
@@ -379,8 +359,6 @@ li > .page-scroll:hover:before {
 .outline{
   outline: 0;
   color:white;
-  /*padding-top: 1.5%;
-  padding-right: 2%;*/
   height: 10vw;
   width: 10vw;
   margin-top: 5vw;
@@ -447,6 +425,7 @@ li > .page-scroll:hover:before {
 
   #menu_list {
      padding-top: 6%;
+     padding-left: 5%;
   }
 
   #menu_list li{
@@ -482,6 +461,7 @@ li > .page-scroll:hover:before {
 
   #menu_list {
      padding-top: 10%;
+     padding-left: 0%;
   }
 
   #menu_list li{
@@ -513,15 +493,6 @@ li > .page-scroll:hover:before {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 }
-
-@media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10) {
-
-}
-
-
-
-
-
 
 
 @media (max-width: 568px) and (orientation: portrait) {
@@ -805,18 +776,40 @@ li > .page-scroll:hover:before {
   height: auto;
 }
 
-/*.member-img{
-  width: 130px;
-  height: 130px;
-  margin-top: 30px;
-  margin-bottom: 5px;
-}*/
+.member-info{
+  font-size: 1.4vw;
+}
 
 @media (max-width: 768px) and (orientation: portrait){
   .justify-center{
     display: block !important;
   }
+
 }
+
+@media (max-width: 500px) and (orientation: portrait){
+  .member-info{
+    font-size: 4vw;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 768px) and (orientation: portrait){
+  .member-info{
+    font-size: 2.9vw;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait){
+  .member-info{
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape){
+  .member-info{
+    font-size: 3vw;
+  }
+}
+
 
 @media (min-width: 768px) and (orientation: landscape){
   .justify-center{
@@ -843,6 +836,10 @@ li > .page-scroll:hover:before {
   .team-section{
     padding-left: 12%;
     padding-right: 12%;
+  }
+
+  .member-info{
+    font-size: 1.1vw;
   }
 }
 
@@ -940,7 +937,22 @@ footer{
   text-decoration: none;
 }
 
+.sm-font{
+  font-size: 12px !important;
+}
 
+@media (max-width: 414px) and (orientation: portrait) {
+  #contact_links li{
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+  }
+}
+
+@media (max-width: 736px) and (orientation: landscape) {
+  #contact_links li{
+    padding-left: 3.5%;
+  }
+}
 
 @media (min-width: 760px) {
   .footer-link{

@@ -61,8 +61,6 @@ $(document).ready(function(){
 
 // Helper functions
   var simulateClick = function (elem) {
-    // console.log('simulating..');
-    // console.log(elem);
     var evt = new MouseEvent('click', {
         bubbles: true,
         cancelable: true,
@@ -131,8 +129,5 @@ revenue_data = {
           });
       }
   });
-
-
-  // YOutube BackGround
 
 });
