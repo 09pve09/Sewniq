@@ -667,7 +667,7 @@ li > .page-scroll:hover:before {
 
 .flowchart-wrapper{
   margin: 3% auto 0 auto;
-  overflow:auto;
+  overflow-y: hidden;
 }
 
 #flowchart{

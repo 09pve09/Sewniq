@@ -5,7 +5,7 @@ app.controller('AngularController', ['$scope', '$routeParams', '$rootScope', fun
 
 
  var present_date = new Date().getTime()/1000;
- var sellingdate = new Date('Sept 30, 2017 16:00:00').getTime()/1000;
+ var sellingdate = new Date('Oct 9, 2017 15:00:00').getTime()/1000;
  var deadline = new Date("Nov 10, 2017 20:16:00").getTime()/1000;
  var counter;
 
