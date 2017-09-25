@@ -158,11 +158,11 @@
   font-size: 90%;
 }
 
-  /*@media (max-width: 736px) and (orientation: portrait) {
+  @media (max-width: 736px) and (orientation: portrait) {
     .flip-clock-wrapper ul li a div div.inn {
-
+      font-size: 50px;
     }
-  }*/
+  }
 
 .flip-clock-wrapper ul li a div.up div.inn {
   top: 0; }
