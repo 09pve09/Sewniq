@@ -155,7 +155,14 @@
   text-align: center;
   background-color: #333;
   border-radius: 6px;
-  font-size: 70px; }
+  font-size: 90%;
+}
+
+  /*@media (max-width: 736px) and (orientation: portrait) {
+    .flip-clock-wrapper ul li a div div.inn {
+
+    }
+  }*/
 
 .flip-clock-wrapper ul li a div.up div.inn {
   top: 0; }
